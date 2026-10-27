@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title={cardTitle} icon-name="standard:approval">
+        <lightning-button-icon
+            slot="actions"
+            icon-name="utility:refresh"
+            alternative-text="Refresh lock status"
+            title="Refresh"
+            onclick={handleRefresh}
+        ></lightning-button-icon>
+
+        <div class="slds-p-horizontal_medium">
+            <template lwc:if={isLoading}>
+                <div class="slds-is-relative slds-p-around_large">
+                    <lightning-spinner alternative-text="Checking lock status" size="small"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:if={errorMessage}>
+                <p class="slds-text-color_error">{errorMessage}</p>
+            </template>
+
+            <template lwc:if={hasStatus}>
+                <div class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name={iconName} size="small" alternative-text={statusLabel}></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <lightning-badge label={statusLabel} class={badgeClass}></lightning-badge>
+                        <p class="slds-text-body_small slds-text-color_weak slds-m-top_xx-small">{helpText}</p>
+                    </div>
+                </div>
+
+                <template lwc:if={showUnlockButton}>
+                    <div class="slds-m-top_small">
+                        <lightning-button
+                            label="Unlock Record"
+                            icon-name="utility:unlock"
+                            variant="neutral"
+                            onclick={handleUnlock}
+                            disabled={isUnlocking}
+                        ></lightning-button>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>RecordLockStatusController</members>
+        <members>RecordLockStatusControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Can_Unlock_Records</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
+        <members>recordLockStatus</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Record_Lock_Status_Unlock</members>
+        <members>Record_Lock_Status_Viewer</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>66.0</version>
+</Package>

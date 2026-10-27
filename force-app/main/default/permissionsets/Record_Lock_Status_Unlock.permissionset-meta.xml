@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>RecordLockStatusController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Can_Unlock_Records</name>
+    </customPermissions>
+    <description>Shows the Unlock button in the Record Lock Status component and allows unlocking records. Assign only to users who should be able to unlock.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Record Lock Status - Unlock</label>
+</PermissionSet>

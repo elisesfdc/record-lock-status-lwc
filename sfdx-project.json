@@ -1,0 +1,6 @@
+{
+  "packageDirectories": [{ "path": "force-app", "default": true }],
+  "name": "record-lock-status",
+  "namespace": "",
+  "sourceApiVersion": "66.0"
+}
